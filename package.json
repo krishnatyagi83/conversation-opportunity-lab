@@ -1,0 +1,24 @@
+{
+  "name": "conversation-opportunity-lab",
+  "version": "1.0.0",
+  "private": false,
+  "description": "Local-first Webex Contact Center transcript opportunity discovery lab",
+  "type": "module",
+  "engines": { "node": ">=20.19.0" },
+  "scripts": {
+    "transcript:dev": "node scripts/run_transcript_lab.mjs",
+    "transcript:service": "node transcript-service/server.mjs",
+    "build": "vite build",
+    "lint": "tsc --noEmit",
+    "test": "npm run build && node --test tests/transcript-lab.test.mjs"
+  },
+  "dependencies": { "react": "19.2.6", "react-dom": "19.2.6" },
+  "devDependencies": {
+    "@types/node": "22.19.19",
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3",
+    "@vitejs/plugin-react": "6.0.2",
+    "typescript": "5.9.3",
+    "vite": "8.0.13"
+  }
+}
